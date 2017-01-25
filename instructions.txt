@@ -1,0 +1,10 @@
+open file directory 
+
+npm install connect
+
+npm init 
+
+npm install connect --save : this include the dependencies
+
+node server : start the http server
+
