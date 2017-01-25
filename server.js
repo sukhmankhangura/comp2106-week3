@@ -55,7 +55,7 @@ let api = function(req,res,next){
     "age":35,
     "nationality":"Canadian"
   });
-//set response type as json
+//set response type as json rather than text or html
 res.writeHead(200,{"Content-Type":"application/json"});
 res.end(person);
 };
@@ -69,5 +69,6 @@ app.use('/',index);
 //app.use(notFound);
 
 //start http server on port 3000
-app.listen(3000);
+let port=process.env.PORT || 3000;
+app.listen(port);
 console.log('connect server running on port 3000');
